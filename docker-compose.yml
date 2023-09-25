@@ -1,0 +1,16 @@
+services:
+  xml-parser:
+    build: .
+    ports:
+      - 3000:3000
+    networks:
+      - default
+  redis:
+    image: redis/redis-stack-server
+    ports:
+      - 6379:6379
+    networks:
+      - default
+
+networks:
+  default:
